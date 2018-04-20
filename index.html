@@ -28,6 +28,7 @@
 </head>
 <body>
 <div id="demo">
+    <a herf="tap-click.html">tap-click</a>
     <ul>
         <li v-for="el in list"
             v-tap="args($index,el,$event)"
@@ -42,7 +43,7 @@
 <script src="vueTap.js"></script>
 <script>
     new Vue({
-        el: "body",
+        el: "#demo",
         data : {
           testStr : 'string',
             list : [{
