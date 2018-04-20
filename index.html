@@ -30,13 +30,13 @@
 <div id="demo">
     <a herf="tap-click.html">tap-click</a>
     <ul>
-        <li v-for="(el,idx) in list" v-tap="args(idx,el,$event)">
+        <li v-for="(el,idx) in list" v-tap="args(idx,el)">
             {{el.name}}---{{el.age}}
         </li>
     </ul>
 </div>
 
-<a href="www.baidu.com" v-tap.prevent="callback">I'm a tag</a>
+<a href="http://www.baidu.com" v-tap.prevent="callback">I'm a tag</a>
 <script src="vue.min.js"></script>
 <script src="vueTap.js"></script>
 <script>
@@ -53,12 +53,10 @@
             }]
         },
         methods : {
-            args : function(index,el,e) {
+            args : function(index,el) {
                 // v-for循环带参数的回调
                 console.log('---index---',index);
                 console.log('---el---',el);
-                console.log('---e---',e);
-                console.log(e.tapObj);
                 //e.tapObj 可获得 tap的一些参数
                 //pageX,pageY,clientX,clientY,distanceX,distanceY
                 //后面2个分别的手指可能移动的位置(以后可用于拓展手势)
