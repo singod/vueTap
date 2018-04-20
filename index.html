@@ -30,8 +30,8 @@
 <div id="demo">
     <a herf="tap-click.html">tap-click</a>
     <ul>
-        <li v-for="el in list"
-            v-tap="args($index,el,$event)"
+        <li v-for="(el,index) in list"
+            v-tap="args(index,el,$event)"
                 >
             {{el.name}}---{{el.age}}
         </li>
