@@ -28,14 +28,14 @@
 </head>
 <body>
 <div id="demo">
-    <a herf="tap-click.html">tap-click</a>
+    
     <ul>
         <li v-for="(el,idx) in list" v-tap="args(idx,el)">
             {{el.name}}---{{el.age}}
         </li>
     </ul>
 </div>
-
+<a href="tap-click.html">tap-click</a>
 <a href="http://www.baidu.com" v-tap.prevent="callback">I'm a tag</a>
 <script src="vue.min.js"></script>
 <script src="vueTap.js"></script>
